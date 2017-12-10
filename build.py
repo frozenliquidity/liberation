@@ -5,16 +5,15 @@ import shutil
 from distutils.dir_util import copy_tree
 
 def get_mpmission_dir():
-	if 'ARMA3_DIR' in os.environ:
-		base_dir = os.environ['ARMA3_DIR']
-	else:
-		base_dir = os.path.abspath(os.path.join(os.getcwd(), os.path.pardir))
-	return os.path.join(base_dir, 'MPMissions')
+    if 'ARMA3_DIR' in os.environ:
+        base_dir = os.environ['ARMA3_DIR']
+    else:
+        base_dir = os.path.abspath(os.path.join(os.getcwd(), os.path.pardir))
+    return os.path.join(base_dir, 'MPMissions')
 
 def get_subdirs(dirname):
     d = dirname
-    return [os.path.join(d, o) for o in os.listdir(d) 
-            if os.path.isdir(os.path.join(d,o))]
+    return [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d,o))]
 
 def find_all_mission_folders():
     mission_folders = get_subdirs(os.path.join(os.getcwd(), 'Missionbasefiles'))
@@ -31,10 +30,14 @@ def clean(mission_folders):
 
 
 def build(mission_folders):
-		
     for dirname in mission_folders:
         src = os.path.join(os.getcwd(), 'Missionbasefiles', dirname)
-        dest = os.path.abspath(os.path.join(get_mpmission_dir(), dirname))
+        mpmission_dir = get_mpmission_dir()
+        dest = os.path.join(mpmission_dir, dirname)
+        print("*"*72)
+        print("Copying {}\nto\n{}".format(src, dest))
+        print("*"*72)
+        print("")
         shutil.copytree(src, dest)
         src = os.path.join(os.getcwd(), 'Missionframework')
         copy_tree(src, dest)
