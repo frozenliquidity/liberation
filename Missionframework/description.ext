@@ -17,6 +17,7 @@ joinUnassigned = 1;
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"
+#include "ace_settings.hpp"
 
 class CfgDebriefing
 {
