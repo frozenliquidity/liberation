@@ -28,6 +28,7 @@ KP_liberation_ace_crates = [
 If you want to change a preset, it's recommended to set all four presets to 0 and edit the appropriate custom.sqf files in the preset folders.*/
 
 /* BLUFOR preset:
+<<<<<<< HEAD
 0 = Custom (default vanilla with many optional mods supported)
 1 = Apex Tanoa (apex vanilla with many optional mods supported)
 2 = 3cb BAF (MTP)
@@ -37,7 +38,7 @@ If you want to change a preset, it's recommended to set all four presets to 0 an
 6 = RHS USAF (Woodland)
 7 = RHS USAF (Desert)
 8 = RHS AFRF (VDV/MSV) */
-KP_liberation_preset_blufor = 7;
+KP_liberation_preset_blufor = 0;
 
 /* OPFOR preset:
 0 = Custom (default vanilla CSAT)
@@ -45,14 +46,37 @@ KP_liberation_preset_blufor = 7;
 2 = RHS AFRF (EMR/MSV)
 3 = Project OPFOR (Takistan)
 4 = Project OPFOR (Islamic State) */
-KP_liberation_preset_opfor = 2;
+KP_liberation_preset_opfor = 0;
 
 /* Resistance preset:
 0 = Custom (default vanilla FIA)
 1 = Apex Tanoa (apex vanilla Syndikat)
 2 = RHS GREF
 3 = Project OPFOR (Middle Eastern) */
+KP_liberation_preset_resistance = 0;
+=======
+0 = custom (default vanilla with many optional mods supported)
+1 = 3cb BAF
+2 = Apex Tanoa
+3 = BWMod (German Bundeswehr)
+4 = RHS USAF woodland
+5 = RHS USAF desert 
+6 = RHS AFRF */
+KP_liberation_preset_blufor = 5;
+
+/* OPFOR preset:
+0 = custom (default vanilla CSAT)
+1 = Apex Tanoa
+2 = Project OPFOR (Takistan)
+3 = RHS AFRF */
+KP_liberation_preset_opfor = 3;
+
+/* Resistance preset:
+0 = custom (default vanilla)
+1 = Apex Tanoa 
+2 = RHS GREF */
 KP_liberation_preset_resistance = 2;
+>>>>>>> Modify default configuration for Altis.
 
 /* Civilians preset:
 0 = Custom (default vanilla)
@@ -72,11 +96,11 @@ KP_liberation_arsenal = 5;
 
 /* - Fuel consumption settings.
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine.	*/
-KP_liberation_fuel_neutral = 360;
+KP_liberation_fuel_neutral = 180;
 // Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
-KP_liberation_fuel_normal = 180;
+KP_liberation_fuel_normal = 90;
 // Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
-KP_liberation_fuel_max = 90;
+KP_liberation_fuel_max = 45;
 
 /* - Gameplay constant settings.
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file.	*/
