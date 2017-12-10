@@ -680,4 +680,24 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_pylons_requireEngineer {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_pylons_requireToolkit {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_pylons_searchDistance {
+        value = 30;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_pylons_rearmNewPylons {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
 };
